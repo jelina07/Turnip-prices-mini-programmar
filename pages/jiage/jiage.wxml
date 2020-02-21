@@ -1,0 +1,46 @@
+<view class="background"> 
+   <view class="toubu">
+      <view style="text-align:center;font-size:40rpx;padding-top:50rpx;">
+         <text>{{pinzhong}}</text>
+      </view>
+      <view style="font-size:30rpx;text-align:center;margin:15rpx 0;">
+         <text>{{today}} 星期{{week}}</text> 
+      </view> 
+      <view>
+            <view class="input" bindtap='inputBind' >
+               <text class="placeholder">输入你想要的内容</text>
+               <icon class="icon" type="search" size="17" bindtap='query'></icon>
+            </view>
+      </view>
+   </view>
+</view> 
+<view class="neirong">
+   <view class="mulu">
+      <view wx:for="{{list}}" class="{{item.isclick}}" bindtap="zhongleionclick" data-index="{{index}}" style=" text-align: center">
+         <text class="muluName">{{item.name}}</text>
+      </view>
+    </view>
+
+    <view style="overflow-y:auto;">
+      <view wx:for="{{list2}}" bindtap="fangda" data-set="{{index}}"> <!--wx:for= 通过url传参-->
+        <view class="zongti">
+            <view class="xiangxi">
+              <view class="tukuang" >
+                <image src="{{item.image}}" class="image1"></image> 
+              </view>
+              <view>
+                <view class="flex">
+                  <text>{{item.name}}</text>
+                  <image src="{{item.heart?'../../images/收藏空.png':'../../images/wodeshoucang.png'}}" class="image2" catchtap="changeImg" data-index="{{index}}"></image>
+                </view>
+                <view>
+                  <text>平均价格：{{item.aprice}}元/斤</text> 
+                </view>
+              </view>
+            </view>
+            <view class="fengexian"></view>
+        </view>
+      </view>
+    </view>
+</view>
+   

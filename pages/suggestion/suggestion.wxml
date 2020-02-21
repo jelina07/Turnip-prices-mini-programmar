@@ -1,0 +1,30 @@
+<view class="background" style="padding-top:50rpx;">
+   <form bindsubmit="formSubmit">
+       <view class="baikuang">
+           <view class="cuzhixian"></view>
+           <view class="biaoti">
+              <text>意见和建议</text>
+           </view>
+           <view class="zhixian"></view>
+           <view wx:if="{{!inputvalue}}">
+             <textarea bindinput="stylechange" name="suggestions"class="yijianhejianyi" placeholder="请填写您遇到的问题描述或者建议，以便我们提供更好的服务(不少于6个字)"></textarea>
+           </view>
+           <view wx:else="{{inputvalue}}">
+             <textarea bindinput="stylechange" name="suggestions"class="yijianhejianyi" placeholder="请填写您遇到的问题描述或者建议，以便我们提供更好的服务(不少于6个字)"></textarea>
+           </view>
+           <view class="cuzhixian"></view>
+           <view class="biaoti">
+              <text>联系方式</text>
+           </view>
+           <view class="zhixian"></view>
+           <view >
+              <textarea name="connection" class="lianxifangshi" placeholder="选填，便于我们与您联系"></textarea>
+           </view>
+           <view class="cuzhixian"></view>
+       </view>
+
+       <view >
+           <button form-type="submit" type="primary" disabled="{{disabled}}"                                 style="margin:80rpx 70rpx;">提交</button>
+       </view>
+   </form>
+</view>

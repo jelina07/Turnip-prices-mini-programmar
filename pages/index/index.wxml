@@ -1,0 +1,39 @@
+<view class="background">
+  <view class="zhuti"><text>萝卜菜价</text></view>
+  <view class="loction">
+      <image src="../../images/定位logo.png" class="dingwei"></image>
+      <text style="margin-left:15rpx;">{{location}}</text>
+      <image src="../../images/刷新.png" class="shuaxin" bindtap="changeAddress"></image>
+  </view>
+  <view style="display:flex;flex-direction:row;"> 
+    <view> 
+    <text class="time">{{today}} 星期{{week}}</text>
+    </view>
+    <!-- <view>
+      <text style="font-family:KaiTi;font-size:30rpx;margin-left:150rpx;">扫一扫</text>
+    </view> -->
+    <!-- <navigator url="../saoma/saoma" hover-class="none">
+      <image src="../../images/扫一扫.png" class="saoma"></image>
+    </navigator> -->
+  </view>
+
+  <view class="baikuang">
+    <view class="zongti">
+       <view wx:for="{{list}}" data-set="{{index}}" bindtap="fangda">     <!--wx:for-->
+          <!-- <navigator url="../fangda/fangda"> -->
+            <view style="margin:30rpx 60rpx 15rpx 60rpx;">
+              <image style="height:250rpx;width:250rpx;border-radius:20rpx;" src="{{item.image}}"></image>
+            </view>
+          <!-- </navigator> -->
+          <view class="flex">
+            <text>{{item.name}}</text>
+            <image class="image" src="{{item.heart?'../../images/收藏空.png':'../../images/wodeshoucang.png'}}" catchtap="shoucangHandle" data-index="{{index}}"></image>
+          </view>
+          <view style="margin-left:60rpx;margin-top:5rpx;font-family: KaiTi;font-size:30rpx;">
+            <text>平均价:{{item.aprice}}元/斤</text>
+          </view>
+       </view>
+    </view>
+</view>
+</view>
+

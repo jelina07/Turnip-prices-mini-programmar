@@ -1,0 +1,59 @@
+<!--mine.wxml-->
+  <view class="mine_container1">
+  </view>
+  <view class="mine_container2">
+  </view>
+   <movable-area  class="mine_container3">
+      <movable-view direction="vertical" class="move" damping="40"out-of-bounds='true'>
+         <image class="mine_touxiang" src="{{touxiang}}"></image> 
+        <!-- <open-data class="mine_touxiang" type="userAvatarUrl"></open-data> -->
+
+        <button class="{{display?'shouquan':'nodisplay'}}" wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">授权登录</button>
+        <view  class="{{display?'nodisplay':'mine_nickName'}}">{{nickname}}</view>
+        <!-- <open-data class="mine_nickName" type="userNickName" lang="zh_CN"></open-data> -->
+
+        <view class="{{display?'nodisplay':'view_zhongti'}}">
+          <navigator url="../collection/collection">
+            <view  hover-class="changes">
+              <view class="flex">
+                <image class="aixin_images" src="../../images/收藏空黑.png"></image>
+                <text class="texts">我的收藏</text>
+                <image class="jiantou_images" src="../../images/向右箭头.png"></image>
+              </view>
+              <view>
+                  <view class="divLine"></view> 
+              </view>
+            </view> 
+          </navigator> 
+          
+          <navigator url="../settings/settings">
+            <view  hover-class="changes">
+              <view class="flex">
+                <image class="tubiao_images" src="../../images/我的设置.png"></image>
+                <text class="texts">我的设置</text>
+                <image class="jiantou_images" src="../../images/向右箭头.png"></image>
+              </view>
+              <view>
+                    <view class="divLine"></view> 
+              </view>
+            </view> 
+          </navigator> 
+          
+          <navigator url="../aboutUs/aboutUs">
+            <view  hover-class="changes">
+              <view class="flex">
+                <image class="tubiao_images" src="../../images/关于我们.png"></image>
+                <text class="texts">关于我们</text>
+                <image class="jiantou_images" src="../../images/向右箭头.png"></image>
+              </view>
+              <view>
+                <view class="divLine"></view> 
+              </view>
+            </view>
+          </navigator>   
+        </view>
+      </movable-view> 
+    </movable-area>
+
+
+  

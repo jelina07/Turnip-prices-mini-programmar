@@ -1,0 +1,49 @@
+page{
+  height: 100%;
+}
+.image1{
+  height: 100rpx;
+  width:100rpx;
+  border-radius: 20rpx;
+}
+.image1view{
+  margin-left:20rpx;
+  margin-top:8rpx;
+}
+.image2{
+  height: 50rpx;
+  width:50rpx;
+}
+.background{
+  height:100%;
+  width:100%;
+  background-color: #F4F4F4;
+  font-family: KaiTi;
+}
+.zongti{
+  font-size:35rpx;  
+  overflow-y: auto;
+}
+.moveview{
+  position: absolute;
+  width:710rpx;
+  height:120rpx;
+  background-color:white;
+  border-radius: 30rpx;
+  overflow: hidden;
+  z-index:4;
+}
+.movearea{
+  margin:20rpx 20rpx;
+  width:600rpx;
+  height:120rpx;
+}
+.lajitong{
+  position: absolute;
+  left:610rpx;
+  height:120rpx;
+  width:100rpx;
+  background-color:white;
+  text-align: center;
+  border-radius: 30rpx;
+}

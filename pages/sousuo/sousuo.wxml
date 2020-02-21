@@ -1,0 +1,37 @@
+<view class="background">
+    <view class='search'>
+            <icon class="imageqian" type="search" size="18" bindtap='query'></icon>
+            <input value="{{inputVal}}" class="inputqian" placeholder='输入你想要的内容' placeholder-class="placeholder" confirm-type='search' bindconfirm='query' bindinput="lengthHeadle" focus="{{true}}" bindconfirm="dianjisousuo"></input>
+            <image src="../../images/clearIcon.png" class="{{lenghtmore1?'clear':'clearno'}}" catchtap="clearInput">
+            </image> 
+    </view> 
+    <view style="overflow-y:auto;margin-top:10rpx;">
+     <view wx:if="{{list2.length!=0}}">
+      <view wx:for="{{list2}}" bindtap="fangda" data-set="{{index}}">  <!--wx:for-->
+        <view class="zongti">
+            <view class="xiangxi">
+              <view class="tukuang" >
+                <image src="{{item.image}}" class="image1"></image> 
+              </view>
+              <view>
+                <view class="flex">
+                  <text>{{item.name}}</text>
+                  <image src="{{item.heart?'../../images/收藏空.png':'../../images/wodeshoucang.png'}}" class="image2" data-index="{{index}}"></image>
+                </view>
+                <view>
+                  <text>平均价格：{{item.aprice}}元/斤</text>
+                </view>
+              </view>
+            </view>
+            <view class="fengexian"></view>
+        </view>
+      </view>
+     </view>
+     <view wx:else style="text-align:center;margin-top:7rpx">
+       <view>{{tishi}}</view>
+     </view>
+  </view>
+</view> 
+
+
+

@@ -1,0 +1,13 @@
+<!--pages/guanwang/guanwang.wxml-->
+<!-- <text>pages/guanwang/guanwang.wxml</text> -->
+<!-- <web-view src="http://jgsb.agri.cn/controller?SERVICE_ID=MARKET_INFO_REPORTS_SEARCH_SERVICE&login_result_sign=nologin#"></web-view> -->
+<view class="background">
+  <view style="text-align:center;font-size:40rpx;">
+    <view style="padding-top:450rpx">
+      数据来源于中国农业信息网，详情请见
+    </view>
+    <view>
+      http://pfsc.agri.cn/
+    </view>
+  </view>
+</view> 

@@ -1,0 +1,29 @@
+<view class="background">
+   <view class="zongti" wx:if="{{tishiShow}}">
+      <view wx:for="{{list}}" data-set="{{index}}" bindtap="suohui">
+          <movable-area class="movearea">
+            <movable-view damping="100" class="moveview"  style=" display:flex;flex-direction:row; align-items: center;"direction="horizontal" x="{{item.x}}"  bindchange="handleMovableChange" bindtouchend="handleTouchend" out-of-bounds="true" data-set="{{index}}">
+              <view class="image1view">
+                <image class="image1" src="{{item.image}}"></image>
+              </view>
+              <view>
+                <view>
+                    <text>{{item.name}}</text>
+                </view>
+                <view>
+                    <text>平均价格：{{item.aprice}}元/斤</text>
+                </view>
+              </view> 
+            </movable-view>
+            <view class="lajitong">
+              <image class="image2" src="../../images/垃圾桶.png" catchtap="removelistHandle" data-set="{{index}}" style="margin-top:30rpx;"></image>
+            </view>
+          </movable-area>
+      </view>
+   </view>
+   <view wx:else style="text-align:center;margin-top:7rpx">
+    <view> {{tishi}} </view>
+   </view>
+</view>
+
+

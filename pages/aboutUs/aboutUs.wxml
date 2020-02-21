@@ -1,0 +1,33 @@
+<!--pages/aboutUs/aboutUs.wxml-->
+<view class="background">
+  <view class="zongti">
+     <view style="text-align:center;">
+       <image class="logo" src="../../images/小程序logo.png"></image>
+     </view>
+     <view class="baikuang">
+       <view class="jianjie">
+         <text >简介</text>
+       </view>
+       <view class="jianjiecontent">
+         <text>这是一款集合菜价、水果价于一体的，让用户可以全面了解价格的小程序。</text>
+       </view>
+       <view class="tuanduijieshao">
+         <text>团队介绍</text>
+       </view>
+       <view wx:for="{{items}}" class="tuandui">
+           <view class="hengflex">
+             <text class="type" style="font-size:35rpx; position: relative; bottom:10rpx;">{{item.type}}</text>
+             <view>
+                  <text class="work" style="font-size:30rpx;">{{item.work}}</text>
+             </view>
+           </view>
+           <view class="shuflex">
+               <image src="{{item.image}}" class="image"></image>
+               <view>
+                  <text class="name" style="font-size:30rpx;position:relative;left:5rpx;">{{item.name}}</text>
+               </view>
+           </view>
+       </view>
+     </view>
+  </view>
+</view>

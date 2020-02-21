@@ -1,0 +1,32 @@
+
+<image src="{{image}}" class="image"></image>
+<image src="../../images/返回.png" class="image2" bindtap="fanhui"></image>
+<view class="lvkuang">
+  <view><text style="font-size:40rpx;font-weight:bold;">{{name}}</text></view>
+  <view>
+      <view class="jiage">
+         <view class="shangxia">
+           <view class="margin">平均价格</view>
+           <view>{{avprice}}</view>
+         </view>
+         <view class="shangxia">
+           <view class="margin">最高-最低</view>
+           <view>{{minTomax}}(元/斤)</view>
+         </view>
+         <view class="shangxia">
+           <view class="margin">涨幅</view>
+           <view>{{zhangfu}}</view>
+         </view>
+      </view>
+  </view>
+  <view style="overflow:auto;margin-top:30rpx;height:75%">
+      <view>
+        <view style="font-size:40rpx;font-weight:bold;">挑选方法</view>
+        <view style="font-size:35rpx;margin:5rpx 10rpx;">{{tiaoxuan1}}</view>
+      </view>
+      <!-- <view>
+        <view style="font-size:40rpx;font-weight:bold;margin-top:10rpx;">家常菜谱</view>
+        <view style="font-size:35rpx;margin:5rpx 10rpx;">{{caipu}}</view>
+      </view> -->
+  </view>
+</view>

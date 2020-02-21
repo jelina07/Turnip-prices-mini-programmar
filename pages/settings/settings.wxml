@@ -1,0 +1,40 @@
+<!-- pages/settings/settings.wxml-->
+<view class="background">
+ <view class="zongti">
+  <view class="xitong">
+     <text>系统</text>
+  </view> 
+  <view class="whitekuang">
+    <view  wx:for="{{items1}}" bindtap="switchHandle">
+      <view class="neirong">
+        <image class="image" src="{{item.image}}"></image>
+        <text class="dingwei">{{item.neirong}}</text>
+        <text data-set="{{index}}" class="kaiguan">{{item.kaiguan}}</text>
+      </view>
+      <view>
+        <view class="divLine"></view>
+      </view>
+    </view>
+  </view>
+   
+   <view class="xitong">
+     <text>其他</text>
+   </view>
+
+   <view class="whitekuang">
+    <view  wx:for="{{items2}}" hover-class="changes">
+     <navigator url="{{item.url}}">
+        <view class="neirong">
+          <image class="image" src="{{item.image}}"></image>
+          <text class="dingwei">{{item.neirong}}</text>
+          <image class="jiantou_images" src="../../images/向右箭头.png"></image>
+        </view>
+        <view>
+          <view class="divLine"></view>
+        </view>
+     </navigator>
+    </view>
+   </view>
+  </view>
+</view>
+
