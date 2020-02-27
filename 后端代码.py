@@ -430,14 +430,12 @@ def ReadCollect():
     names = readCollect(id)
     json_data = {}
     j = 0
+    if names == -1:
+        return 'NoData'
     for i in names:
         json_data[j] = i
         j=j+1
-    
-    if names == -1:
-        return "没有收藏内容"
-    else:
-        return json_data
+    return json_data
 
 # 功能：用户取消收藏
 # 传入参数：
